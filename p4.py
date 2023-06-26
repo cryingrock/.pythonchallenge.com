@@ -10,7 +10,7 @@ while True:
 
     if number_match:
         number = int(number_match.group(1))
-        next_number = str(number)  # Divide the number by 2
+        next_number = str(number)
         url = f"http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing={next_number}"
         response = requests.get(url)
         print(f"URL: {url} - Response: {response.text}")
@@ -28,3 +28,4 @@ while True:
     else:
         print("No number found in the response.")
         break
+#http://www.pythonchallenge.com/pc/def/peak.html and last number 66831
