@@ -1,7 +1,7 @@
 import requests
 from zipfile import ZipFile
 
-class pythonchallenge18:
+class pythonchallenge20:
     def __init__(self,path,original_headers):
         self.path = path
         self.original_headers = original_headers
@@ -53,7 +53,7 @@ class pythonchallenge18:
         file = open('p20.zip','wb')
         file.write(self.response.content)
         file.close()
-result = pythonchallenge18('http://www.pythonchallenge.com/pc/hex/unreal.jpg',{'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*','Connection': 'keep-alive', 'Authorization': 'Basic YnV0dGVyOmZseQ=='})
+result = pythonchallenge20('http://www.pythonchallenge.com/pc/hex/unreal.jpg',{'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*','Connection': 'keep-alive', 'Authorization': 'Basic YnV0dGVyOmZseQ=='})
 
 
 class open:
@@ -63,7 +63,7 @@ class open:
     def opening(self):
         with ZipFile(self.path,'r') as file:
             file.namelist() #['readme.txt', 'package.pack']
-            with file.open('readme.txt', mode='r',pwd=bytes(pythonchallenge18.nickname(self),encoding='utf-8')) as readme:
+            with file.open('readme.txt', mode='r',pwd=bytes(pythonchallenge20.nickname(self),encoding='utf-8')) as readme:
                 return readme.read() #b"Yes! This is really level 21 in here. \nAnd yes, After you solve it, you'll be in level 22!\n\nNow for the level:\n\n* We used to play this game when we were kids\n* When I had no idea what to do, I looked backwards.\n"
 
 file = open('p20.zip')
